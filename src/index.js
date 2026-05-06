@@ -38,7 +38,6 @@ let currentPiece = null;
 let currentX = 0;
 let currentY = 0;
 let score = 0;
-let highScore = 0;
 let gameOver = false;
 let isPaused = false;
 let dropCounter = 0;
