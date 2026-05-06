@@ -59,7 +59,6 @@ function init() {
     .map(() => Array(COLS).fill(0));
     highScore = parseInt(localStorage.getItem("stackOverflownHighScore")) || 0;
     document.getElementById("high-score").textContent = highScore;
-
   // Set initial target pattern
   setNewTargetPattern();
 
@@ -311,6 +310,7 @@ function clearPattern(startRow, startCol) {
 function updateScore() {
   document.getElementById("score").textContent = score;
   
+  // Update high score if current score exceeds it
   if (score > highScore) {
     highScore = score;
     document.getElementById("high-score").textContent = highScore;
